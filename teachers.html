@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System | Teachers</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">U</div>
+            <div>
+                <h2>University Portal</h2>
+                <p>Management System</p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <span>Administrator</span>
+            <a href="index.php" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>MAIN MENU</h3>
+
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="students.html" class="nav-link">Students</a>
+            <a href="teachers.html" class="nav-link active">Teachers</a>
+            <a href="departments.html" class="nav-link">Departments</a>
+            <a href="courses.html" class="nav-link">Courses</a>
+            <a href="enrollment.html" class="nav-link">Enrollment</a>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Teachers</h1>
+                    <p>Register and manage university teachers.</p>
+                </div>
+
+                <span class="date-label">Teacher Management</span>
+            </div>
+
+            <!-- Add Teacher Form -->
+            <section class="content-card">
+
+                <div class="section-heading">
+                    <h2>Add New Teacher</h2>
+                    <p>Enter the teacher's information below.</p>
+                </div>
+
+                <form action="#" method="POST">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Enter first name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Enter last name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="teacher@example.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departmentID">Department</label>
+                        <select id="departmentID" name="departmentID" required>
+                            <option value="">Select Department</option>
+                            <!-- Department options will be loaded from MySQL later -->
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Add Teacher
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Teacher List -->
+            <section class="content-card" style="margin-top: 25px;">
+
+                <div class="section-heading">
+                    <h2>Teacher List</h2>
+                    <p>View and manage registered teachers.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="searchTeacher">Search Teachers</label>
+                    <input
+                        type="search"
+                        id="searchTeacher"
+                        placeholder="Search by teacher name or email..."
+                    >
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="background-color: #f4f7fb;">
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">ID</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">First Name</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">Last Name</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">Email</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">Phone</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">Department ID</th>
+                                <th style="padding: 14px; border-bottom: 1px solid #e3e9f1;">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td colspan="7" style="padding: 25px; text-align: center; color: #7b8799;">
+                                    No teachers registered yet.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <footer class="dashboard-footer">
+                University Management System &copy; 2026
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
